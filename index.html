@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Zaika</title>
+    <script
+      src="https://kit.fontawesome.com/74fecec165.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+      .navbar-brand {
+        color: orange;
+      }
+      .nav-link:hover {
+        color: orange;
+        border-bottom: 2px solid orange;
+      }
+      .nav-item i:hover {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar nav navbar-expand-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand p-3" href="index.html"
+          ><h3><i class="fa-solid fa-utensils"></i> Zaika</h3></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mynavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item p-3">
+              <a class="nav-link" href="#home"><b>Home</b></a>
+            </li>
+            <li class="nav-item p-3">
+              <a class="nav-link" href="#dishes"><b>Dishes</b></a>
+            </li>
+            <li class="nav-item p-3">
+              <a class="nav-link" href="#about"><b>About</b></a>
+            </li>
+            <li class="nav-item p-3">
+              <a class="nav-link" href="#menu"><b>Menu</b></a>
+            </li>
+            <li class="nav-item p-3">
+              <a class="nav-link" href="#review"><b>Review</b></a>
+            </li>
+            <li class="nav-item p-3">
+              <a class="nav-link" href="#order"><b>Order</b></a>
+            </li>
+          </ul>
+          <div class="d-flex p-3">
+            <div class="p-2">
+              <i
+                class="fa-solid fa-circle-user"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal"
+              ></i>
+            </div>
+            <div class="p-2">
+              <i
+                class="fa-solid fa-heart"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#demo2"
+              ></i>
+            </div>
+            <div class="p-2">
+              <i
+                class="fa-solid fa-cart-shopping"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#demo1"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">
+              Sign in to <span style="color: orange">Zaika</span>
+            </h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="/action_page.php">
+              <div class="mb-3 mt-3">
+                <label for="email" class="form-label">Email:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter email"
+                  name="email"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="pwd" class="form-label">Password:</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="pwd"
+                  placeholder="Enter password"
+                  name="pswd"
+                />
+              </div>
+              <div class="form-check mb-3">
+                <label class="form-check-label">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="remember"
+                  />
+                  Remember me
+                </label>
+              </div>
+              <button
+                type="submit"
+                class="btn"
+                style="background-color: orange"
+              >
+                Sign in
+              </button>
+            </form>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas offcanvas-start" id="demo1">
+      <div class="offcanvas-header">
+        <h4 class="offcanvas-title">
+          Add to cart <span class="text-muted">(0 items)</span>
+        </h4>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <p>Some text lorem ipsum.</p>
+        <p>Some text lorem ipsum.</p>
+        <p>Some text lorem ipsum.</p>
+        <button class="btn" style="background-color: orange" type="button">
+          Buy now
+        </button>
+      </div>
+    </div>
+    <div class="offcanvas offcanvas-start" id="demo2">
+      <div class="offcanvas-header">
+        <h4 class="offcanvas-title">
+          Favourite <i class="fa-solid fa-heart" style="color: orange"></i
+          ><span class="text-muted">(0 items)</span>
+        </h4>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <p>Some text lorem ipsum.</p>
+        <p>Some text lorem ipsum.</p>
+        <p>Some text lorem ipsum.</p>
+        <button class="btn" style="background-color: orange" type="button">
+          Buy now
+        </button>
+      </div>
+    </div>
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner" id="home">
+        <div class="carousel-item active">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6">
+                <p style="color: orange; margin-left: 10%; margin-top: 14%">
+                  Our special dish
+                </p>
+                <h3 style="margin-left: 10%">Spicy Noodles</h3>
+                <p style="margin-left: 10%">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Praesentium quisquam dolorem vel quasi neque perferendis sequi
+                  molestias architecto error repudiandae!
+                </p>
+                <button class="btn btn-dark" style="margin-left: 10%">
+                  Order now <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+              <div class="col-sm-6">
+                <img
+                  src="home-img-1.png"
+                  class="p-3"
+                  alt="Noodles"
+                  width="100%"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6">
+                <p style="color: orange; margin-left: 10%; margin-top: 14%">
+                  Our special dish
+                </p>
+                <h3 style="margin-left: 10%">Fried-chicken</h3>
+                <p style="margin-left: 10%">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Praesentium quisquam dolorem vel quasi neque perferendis sequi
+                  molestias architecto error repudiandae!
+                </p>
+                <button class="btn btn-dark" style="margin-left: 10%">
+                  Order now <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+              <div class="col-sm-6">
+                <img
+                  src="home-img-2.png"
+                  class="p-3"
+                  alt="Fried-chicken"
+                  width="100%"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6">
+                <p style="color: orange; margin-left: 10%; margin-top: 14%">
+                  Our special dish
+                </p>
+                <h3 style="margin-left: 10%">Delicious Pizza</h3>
+                <p style="margin-left: 10%">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Praesentium quisquam dolorem vel quasi neque perferendis sequi
+                  molestias architecto error repudiandae!
+                </p>
+                <button class="btn btn-dark" style="margin-left: 10%">
+                  Order now <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+              <div class="col-sm-6">
+                <img
+                  src="home-img-3.png"
+                  class="p-3"
+                  alt="Cheese-pizza"
+                  width="100%"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Left and right controls/icons -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#demo"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#demo"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+    <div class="container" id="dishes">
+      <div class="row">
+        <p style="color: green; text-align: center">Our dishes</p>
+        <h3 style="text-align: center">Popular dishes</h3>
+      </div>
+    </div>
+    <div></div>
+    <div class="container-fluid wrapper">
+      <div class="row">
+        <div class="col-sm-3">
+          <div
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: center;
+              background-color: white;
+              margin: 2%;
+            "
+          >
+            <img src="dish-2.png" alt="burger" width="80%" class="p-5" />
+            <h3>Tasty food</h3>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <h2>$15</h2>
+            <button class="btn btn-dark m-3">Add to cart</button>
+            <button class="btn m-3 text-light" style="background-color: orange">
+              Buy now
+            </button>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: center;
+              background-color: white;
+              margin: 2%;
+            "
+          >
+            <img src="dish-3.png" alt="burger" width="80%" class="p-2" />
+            <h3>Tasty food</h3>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <h2>$15</h2>
+            <button class="btn btn-dark m-3">Add to cart</button>
+            <button class="btn m-3 text-light" style="background-color: orange">
+              Buy now
+            </button>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: center;
+              background-color: white;
+              margin: 2%;
+            "
+          >
+            <img src="dish-4.png" alt="burger" width="80%" class="p-2" />
+            <h3>Tasty food</h3>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <h2>$15</h2>
+            <button class="btn btn-dark m-3">Add to cart</button>
+            <button class="btn m-3 text-light" style="background-color: orange">
+              Buy now
+            </button>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: center;
+              background-color: white;
+              margin: 2%;
+            "
+          >
+            <img src="dish-5.png" alt="burger" width="80%" class="p-2" />
+            <h3>Tasty food</h3>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <h2>$15</h2>
+            <button class="btn btn-dark m-3">Add to cart</button>
+            <button class="btn m-3 text-light" style="background-color: orange">
+              Buy now
+            </button>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: center;
+              background-color: white;
+              margin: 2%;
+            "
+          >
+            <img src="dish-6.png" alt="burger" width="80%" class="p-5" />
+            <h3>Tasty food</h3>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <h2>$15</h2>
+            <button class="btn btn-dark m-3">Add to cart</button>
+            <button class="btn m-3 text-light" style="background-color: orange">
+              Buy now
+            </button>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: center;
+              background-color: white;
+              margin: 2%;
+            "
+          >
+            <img src="dish-5.png" alt="burger" width="80%" class="p-2" />
+            <h3>Tasty food</h3>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <h2>$15</h2>
+            <button class="btn btn-dark m-3">Add to cart</button>
+            <button class="btn m-3 text-light" style="background-color: orange">
+              Buy now
+            </button>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: center;
+              background-color: white;
+              margin: 2%;
+            "
+          >
+            <img src="dish-6.png" alt="burger" width="80%" class="p-5" />
+            <h3>Tasty food</h3>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <h2>$15</h2>
+            <button class="btn btn-dark m-3">Add to cart</button>
+            <button class="btn m-3 text-light" style="background-color: orange">
+              Buy now
+            </button>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: center;
+              background-color: white;
+              margin: 2%;
+            "
+          >
+            <img src="dish-1.png" alt="burger" width="80%" class="p-5" />
+            <h3>Tasty food</h3>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <h2>$15</h2>
+            <button class="btn btn-dark m-3">Add to cart</button>
+            <button class="btn m-3 text-light" style="background-color: orange">
+              Buy now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5" id="about">
+      <div class="row">
+        <p style="color: green; text-align: center">About us</p>
+        <h3 style="text-align: center">Why choose us?</h3>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="about-img.png" alt="momo-img" width="100%" />
+        </div>
+        <div class="col-sm-6">
+          <h2 style="margin-top: 16%">Best Food in the country</h2>
+          <p class="mt-3">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel ea
+            minima sapiente, eum ullam blanditiis nulla dolore saepe aliquam
+            cupiditate itaque impedit iusto omnis molestias suscipit amet non,
+            maxime neque!
+          </p>
+          <p class="mt-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+            maxime!
+          </p>
+          <button class="btn btn-dark text-light m-2">
+            <i class="fa-solid fa-truck-fast"></i> Free delivery
+          </button>
+          <button class="btn btn-dark text-light m-2">
+            <i class="fa-solid fa-dollar-sign"></i> Easy payment
+          </button>
+          <button class="btn btn-dark text-light m-2">
+            <i class="fa-solid fa-headphones"></i> 24 * 7 Service
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="menu">
+      <div class="row">
+        <p style="color: green; text-align: center">Our Menu</p>
+        <h3 style="text-align: center">Today's Special</h3>
+      </div>
+    </div>
+    <div class="container-fluid bg-light">
+      <div class="row">
+        <div class="col-sm-3">
+          <div
+            class="dish"
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: justify;
+              background-color: white;
+              margin: 2%;
+            "
+          >
+            <img src="menu-1.jpg" alt="burger" width="100%" />
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <h5>Delicious Food</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea atque
+              adipisci accusantium, ipsum voluptatum vel.
+            </p>
+            <div class="d-flex justify-content-between mb-3">
+              <div class="p-2">
+                <button class="btn btn-dark">Add to cart</button>
+              </div>
+              <div class="p-2" style="color: green"><h2>$15</h2></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div
+            class="dish"
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: justify;
+              background-color: white;
+              margin: 2%;
+            "
+          >
+            <img src="menu-9.jpg" alt="burger" width="100%" />
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <h5>Delicious Food</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea atque
+              adipisci accusantium, ipsum voluptatum vel.
+            </p>
+            <div class="d-flex justify-content-between mb-3">
+              <div class="p-2">
+                <button class="btn btn-dark">Add to cart</button>
+              </div>
+              <div class="p-2" style="color: green"><h2>$15</h2></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div
+            class="dish"
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: justify;
+              background-color: white;
+              margin: 2%;
+            "
+          >
+            <img src="menu-3.jpg" alt="burger" width="100%" />
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <h5>Delicious Food</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea atque
+              adipisci accusantium, ipsum voluptatum vel.
+            </p>
+            <div class="d-flex justify-content-between mb-3">
+              <div class="p-2">
+                <button class="btn btn-dark">Add to cart</button>
+              </div>
+              <div class="p-2" style="color: green"><h2>$15</h2></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div
+            class="dish"
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: justify;
+              background-color: white;
+              margin: 2%;
+            "
+          >
+            <img src="menu-4.jpg" alt="burger" width="100%" />
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <h5>Delicious Food</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea atque
+              adipisci accusantium, ipsum voluptatum vel.
+            </p>
+            <div class="d-flex justify-content-between mb-3">
+              <div class="p-2">
+                <button class="btn btn-dark">Add to cart</button>
+              </div>
+              <div class="p-2" style="color: green"><h2>$15</h2></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div
+            class="dish"
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: justify;
+              background-color: white;
+              margin: 2%;
+            "
+          >
+            <img src="menu-5.jpg" alt="burger" width="100%" />
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <h5>Delicious Food</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea atque
+              adipisci accusantium, ipsum voluptatum vel.
+            </p>
+            <div class="d-flex justify-content-between mb-3">
+              <div class="p-2">
+                <button class="btn btn-dark">Add to cart</button>
+              </div>
+              <div class="p-2" style="color: green"><h2>$15</h2></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div
+            class="dish"
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: justify;
+              background-color: white;
+              margin: 2%;
+            "
+          >
+            <img src="menu-6.jpg" alt="burger" width="100%" />
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <h5>Delicious Food</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea atque
+              adipisci accusantium, ipsum voluptatum vel.
+            </p>
+            <div class="d-flex justify-content-between mb-3">
+              <div class="p-2">
+                <button class="btn btn-dark">Add to cart</button>
+              </div>
+              <div class="p-2" style="color: green"><h2>$15</h2></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div
+            class="dish"
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: justify;
+              background-color: white;
+              margin: 2%;
+            "
+          >
+            <img src="menu-7.jpg" alt="burger" width="100%" />
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <h5>Delicious Food</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea atque
+              adipisci accusantium, ipsum voluptatum vel.
+            </p>
+            <div class="d-flex justify-content-between mb-3">
+              <div class="p-2">
+                <button class="btn btn-dark">Add to cart</button>
+              </div>
+              <div class="p-2" style="color: green"><h2>$15</h2></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div
+            class="dish"
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: justify;
+              background-color: white;
+              margin: 2%;
+            "
+          >
+            <img src="menu-8.jpg" alt="burger" width="100%" />
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <h5>Delicious Food</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea atque
+              adipisci accusantium, ipsum voluptatum vel.
+            </p>
+            <div class="d-flex justify-content-between mb-3">
+              <div class="p-2">
+                <button class="btn btn-dark">Add to cart</button>
+              </div>
+              <div class="p-2" style="color: green"><h2>$15</h2></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5" id="review">
+      <div class="row">
+        <p style="color: green; text-align: center">Customer's Review</p>
+        <h2 style="text-align: center">What They Say</h2>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-4 bg-light">
+          <div
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: center;
+              background-color: white;
+            "
+          >
+            <img
+              src="pic-1.png"
+              alt="customer1"
+              width="80%"
+              style="border-radius: 250px; object-fit: cover; padding: 10px"
+            />
+            <h3>Raghav</h3>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+              laudantium assumenda quidem repellat a architecto voluptates dicta
+              mollitia corrupti alias ipsam repellend.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-4 bg-light">
+          <div
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: center;
+              background-color: white;
+            "
+          >
+            <img
+              src="pic-2.png"
+              alt="customer1"
+              width="80%"
+              style="border-radius: 250px; object-fit: cover; padding: 10px"
+            />
+            <h3>Raghav</h3>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+              laudantium assumenda quidem repellat a architecto voluptates dicta
+              mollitia corrupti alias ipsam repellend
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-4 bg-light">
+          <div
+            style="
+              border: 1px solid lightblue;
+              border-radius: 5px;
+              text-align: center;
+              background-color: white;
+            "
+          >
+            <img
+              src="pic-3.png"
+              alt="customer1"
+              width="80%"
+              style="border-radius: 250px; object-fit: cover; padding: 10px"
+            />
+            <h3>Raghav</h3>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star" style="color: orange"></i>
+            <i class="fa-solid fa-star-half" style="color: orange"></i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+              laudantium assumenda quidem repellat a architecto voluptates dicta
+              mollitia corrupti alias ipsam repellendu
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5" id="order">
+      <div class="row">
+        <p style="color: green; text-align: center">Order Now</p>
+        <h2 style="text-align: center">Free and Fast</h2>
+      </div>
+    </div>
+    <div class="container-fluid bg-light">
+      <div class="row">
+        <div class="col-sm-6">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14393.511974855413!2d85.14436767973257!3d25.592352889420972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed5884484c81cb%3A0xfae38a8a97ed5467!2sKankarbagh%2C%20Patna%2C%20Bihar%20800020!5e0!3m2!1sen!2sin!4v1663238266458!5m2!1sen!2sin"
+            width="100%"
+            height="400px"
+          ></iframe>
+        </div>
+        <div class="col-sm-6">
+          <div>
+            <form>
+              <div class="mb-3 mt-3">
+                <label for="pwd" class="form-label">Your name</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="pwd"
+                  placeholder="Enter Name"
+                  name="pswd"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter email"
+                  name="email"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="pwd" class="form-label">Password:</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="pwd"
+                  placeholder="Enter password"
+                  name="pswd"
+                />
+              </div>
+              <div class="form-check mb-3">
+                <label class="form-check-label">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="remember"
+                  />
+                  Remember me
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt-5 bg-dark text-light">
+      <div class="row">
+        <div class="col-sm-3">
+          <h2>Location</h2>
+          <p>Delhi</p>
+          <p>Patna</p>
+          <p>Kolkata</p>
+          <p>Mumbai</p>
+          <p>Ahemdabad</p>
+          <p>Guwahati</p>
+        </div>
+        <div class="col-sm-3">
+          <h2>Quick Links</h2>
+          <p>Home</p>
+          <p>Dishes</p>
+          <p>About</p>
+          <p>Menu</p>
+          <p>Review</p>
+          <p>Order</p>
+        </div>
+        <div class="col-sm-3">
+          <h2>Contact info</h2>
+          <p>+123-456-7890</p>
+          <p>+111-222-3333</p>
+          <p>Raj Gupta</p>
+          <p>rajgupta@gmail.com</p>
+          <p>www.rajgupta.com</p>
+          <p>=91-XXXXXXXXXX</p>
+        </div>
+        <div class="col-sm-3">
+          <h2>Follow us</h2>
+          <p>Facebook</p>
+          <p>Instagram</p>
+          <p>Twitter</p>
+          <p>YouTube</p>
+          <p>Snapchat</p>
+          <p>Linkedin</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid text-center bg-dark text-light mt-3">
+      <h4>
+        All right reserved || &copy Creted by
+        <span style="color: orange">Rahul kumar</span>
+      </h4>
+    </div>
+  </body>
+</html>
